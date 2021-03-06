@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>
+	<title>Javascript</title>
+	<script type="text/javascript">
+	function maxProduct(nums){
+		var N = nums.length;
+		var temp = 0;
+		var max = 0;
+		//alert(N);
+		for(var i=0; i<=N-1;i++){
+			for(var j=0; j<=N-1; j++){
+				if(nums[i]!=nums[j]){
+					temp = nums[i]*nums[j]
+					if(max == 0){
+						max=temp
+					}
+					if(temp > max){
+						max=temp
+					}
+				}
+			}
+		}
+		
+		alert(max);
+	}
+	//alert("1");
+	debugger;
+	maxProduct([5, 20, 2, 6]);
+	maxProduct([10, -20, 0, 3]);	
+	maxProduct([-10, 2]);	
+	
+	</script>
+</head>
+<body>
+</body>
+</html>
